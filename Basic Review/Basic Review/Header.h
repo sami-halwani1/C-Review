@@ -37,6 +37,10 @@ void arrays();
 void moreArrays();
 void arrayClass();
 void vectorClass();
+void twoDArrays();
+void arrayData();
+void vectorData();
+void weightTracking();
 //----------------------------------------------------------
 //----------------------------------------------------------
 
@@ -657,6 +661,92 @@ void vectorClass() {
 
 	for (auto name : newVector) {
 		cout << name << endl;
+
+	}
+}
+void twoDArrays() {
+	
+	int myNum[2][3]{
+		{1,2,3},
+		{4,5,6}
+	}; //2d  2x3 array
+	cout << myNum[0][2] << endl;
+
+	myNum[1][0] = 14;
+	cout << myNum[1][0] << endl;
+
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 3; j++) {
+			cout << myNum[i][j] << " ";
+		}
+		cout << endl;
+	}
+
+	cout << endl << endl;
+	for (int i = 1; i >= 0; i--) {
+		for (int j = 2; j >= 0;j--) {
+			cout << myNum[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+void arrayData() {
+
+	array<int, 5> myIntArray{};
+
+	for (int i = 0; i < myIntArray.size(); i++) {
+		cout << "Enter a Value for the Array: ";
+		cin >> myIntArray[i];
+	}
+
+	for (int i = 0; i < myIntArray.size(); i++) {
+		cout << myIntArray[i] * 2 << " ";
+	}
+	cout << endl;
+
+}
+void vectorData() {
+
+	vector<int> myVector;
+	int input = 0;
+	cout << "Enter a Negative Number to Stop Adding Values!" << endl;
+	cout << "Add a Value to the Vector: ";
+
+	while (input >= 0) {
+		cin >> input;
+		if (input < 0) {
+			break;
+		}
+		myVector.push_back(input);
+		cout << "Add a Value to the Vector: ";
+	}
+
+	for (int i = 0; i < myVector.size(); i++) {
+		cout << myVector[i] * 2 << endl;
+	}
+}
+void weightTracking() {
+
+	vector<int> weights;
+	vector<string> names;
+
+	string name;
+	int weight;
+	for (int i = 0; i < 5; i++) {
+
+		cout << "Enter a Name: ";
+		getline(cin, name);
+		cout << "Enter " << name << " weight: ";
+		cin >> weight;
+		cin.get();
+
+		names.push_back(name);
+		weights.push_back(weight);
+	}
+
+	for (int i = 0; i < 5; i++) {
+
+		cout << names[i] << " weighs " << weights[i] << " lbs" << endl;
 
 	}
 }

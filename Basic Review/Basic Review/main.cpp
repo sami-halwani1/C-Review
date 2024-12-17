@@ -34,6 +34,10 @@ int main() {
 	//moreArrays();
 	//arrayClass();
 	//vectorClass();
+	//twoDArrays();
+	//arrayData();
+	//vectorData();
+	weightTracking();
 
 	return 0;
 }
