@@ -77,26 +77,26 @@ print("Distance:", distance)
 # ax.scatter3D(x, y, z)
 # plt.show()
 
-# Generate random 3D points
-points = np.random.rand(30, 3)  # 30 random points in 3D space
+# # Generate random 3D points
+# points = np.random.rand(30, 3)  # 30 random points in 3D space
 
-# Compute the convex hull
-hull = ConvexHull(points)
+# # Compute the convex hull
+# hull = ConvexHull(points)
 
-# Plot the convex hull
-fig = plt.figure()
-ax = fig.add_subplot(111, projection="3d")
+# # Plot the convex hull
+# fig = plt.figure()
+# ax = fig.add_subplot(111, projection="3d")
 
-# Plot original points
-ax.scatter(points[:, 0], points[:, 1], points[:, 2])
+# # Plot original points
+# ax.scatter(points[:, 0], points[:, 1], points[:, 2])
 
-# Plot the hull
-for simplex in hull.simplices:
-    triangle = [points[simplex[0]], points[simplex[1]], points[simplex[2]]]
-    ax.add_collection3d(Poly3DCollection([triangle], alpha=0.3, edgecolor="r"))
+# # Plot the hull
+# for simplex in hull.simplices:
+#     triangle = [points[simplex[0]], points[simplex[1]], points[simplex[2]]]
+#     ax.add_collection3d(Poly3DCollection([triangle], alpha=0.3, edgecolor="r"))
 
-plt.title("Convex Hull of 3D Points")
-plt.show()
+# plt.title("Convex Hull of 3D Points")
+# plt.show()
 
 # # Parameters for the cylinder
 # radius = 2
@@ -164,21 +164,73 @@ plt.show()
 # plt.title("Boolean Intersection of Two Triangles")
 # plt.show()
 
-# Generate random points
-points = np.random.rand(20, 2)
+# # Generate random points
+# points = np.random.rand(20, 2)
 
-# Delaunay Triangulation
-tri = Delaunay(points)
+# # Delaunay Triangulation
+# tri = Delaunay(points)
 
-# Plot Delaunay Triangulation
-plt.triplot(points[:, 0], points[:, 1], tri.simplices, color="blue")
-plt.plot(points[:, 0], points[:, 1], "o", label="Points")
-plt.title("Delaunay Triangulation")
-plt.legend()
-plt.show()
+# # Plot Delaunay Triangulation
+# plt.triplot(points[:, 0], points[:, 1], tri.simplices, color="blue")
+# plt.plot(points[:, 0], points[:, 1], "o", label="Points")
+# plt.title("Delaunay Triangulation")
+# plt.legend()
+# plt.show()
 
-# Voronoi Diagram
-vor = Voronoi(points)
-fig = voronoi_plot_2d(vor)
-plt.title("Voronoi Diagram")
+# # Voronoi Diagram
+# vor = Voronoi(points)
+# fig = voronoi_plot_2d(vor)
+# plt.title("Voronoi Diagram")
+# plt.show()
+
+# Generate two sets of 3D points
+points1 = np.array([
+    [0, 0, 0],
+    [1, 1, 0],
+    [1, 0, 1],
+    [0, 1, 1],
+    [1, 1, 1],
+    [0.5, 0.5, 1.5],
+    [0.5, 0.5, 0.5]
+])
+
+points2 = np.array([
+    [0.5, 0.5, 0.5],
+    [1, 1, 1],
+    [1.5, 1.5, 1],
+    [1.5, 1, 1.5],
+    [1, 1.5, 1.5],
+    [0.5, 1, 1],
+    [1, 0.5, 1]
+])
+
+# Compute the Convex Hulls
+hull1 = ConvexHull(points1)
+hull2 = ConvexHull(points2)
+
+# 3D Plot
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+
+# Function to plot convex hull
+def plot_hull(ax, hull, points, color, label):
+    for simplex in hull.simplices:
+        vertices = points[simplex]
+        ax.add_collection3d(Poly3DCollection([vertices], color=color, alpha=0.3, edgecolor='k'))
+    ax.scatter(points[:, 0], points[:, 1], points[:, 2], color=color, s=50, label=label)
+
+# Plot the two convex hulls
+plot_hull(ax, hull1, points1, 'blue', 'Hull 1')
+plot_hull(ax, hull2, points2, 'green', 'Hull 2')
+
+# Plot overlapping points
+ax.scatter(0.5, 0.5, 0.5, color='red', s=100, label='Possible Overlap')
+
+# Customize plot
+ax.set_title('3D Convex Hulls')
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.legend()
+
 plt.show()
