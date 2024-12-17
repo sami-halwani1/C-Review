@@ -1,14 +1,29 @@
 ﻿  main.cpp
-C:\Users\4sake\Documents\GitHub\C-Review\Basic Review\Basic Review\Header.h(151,6): warning C4101: 'age': unreferenced local variable
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(159,6): warning C4101: 'age': unreferenced local variable
   (compiling source file 'main.cpp')
   
-C:\Users\4sake\Documents\GitHub\C-Review\Basic Review\Basic Review\Header.h(426,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(434,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\Users\4sake\Documents\GitHub\C-Review\Basic Review\Basic Review\Header.h(436,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(444,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\Users\4sake\Documents\GitHub\C-Review\Basic Review\Basic Review\Header.h(515,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(523,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   (compiling source file 'main.cpp')
   
-  Basic Review.vcxproj -> C:\Users\4sake\Documents\GitHub\C-Review\Basic Review\x64\Debug\Basic Review.exe
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(770,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(788,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(789,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(790,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(791,18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+  Basic Review.vcxproj -> C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\x64\Debug\Basic Review.exe

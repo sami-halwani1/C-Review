@@ -6,6 +6,7 @@
 #include <ctime> // Library to Reference Current Local Time
 #include <array> // Library to reference Array Class
 #include <vector> // Library to reference Vector Class
+#include <cmath> // 
 
 using namespace std;
 
@@ -41,6 +42,13 @@ void twoDArrays();
 void arrayData();
 void vectorData();
 void weightTracking();
+int giveMe10();
+int addThese(int, int);
+int square(int);
+void passingSchemes(int&);
+void threeTimeN(int, int&);
+void modifyGlobal(int &);
+void mathReview();
 //----------------------------------------------------------
 //----------------------------------------------------------
 
@@ -749,6 +757,43 @@ void weightTracking() {
 		cout << names[i] << " weighs " << weights[i] << " lbs" << endl;
 
 	}
+}
+int giveMe10() {
+	int num = 10;
+	return num;
+}
+int addThese(int num1, int num2) {
+	int sum = num1 + num2;
+	return sum;
+}
+int square(int num1) {
+	int squared = pow(num1, 2);
+
+	return squared;
+}
+void passingSchemes(int &num1) {
+	num1 = 100;
+}
+void threeTimeN(int num1, int &num2) {
+	num1 = num1 * 3;
+	num2 = num2 * 3;
+
+}
+void modifyGlobal(int &counter) {
+	for (int i = 0; i < 100;i++) {
+		counter++;
+	}
+}
+void mathReview() {
+	int powResult = pow(2, 3);
+	int sqrtResult = sqrt(25);
+	int ceilResult = ceil(4.2);
+	int floorResult = floor(4.2);
+
+	cout << "powResult: " << powResult << endl;
+	cout << "sqrtResult: " << sqrtResult << endl;
+	cout << "powReceilResultsult: " << ceilResult << endl;
+	cout << "floorResult: " << floorResult << endl;
 }
 //----------------------------------------------------------
 //----------------------------------------------------------
