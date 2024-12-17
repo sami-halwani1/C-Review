@@ -21,8 +21,12 @@ int main() {
 	//madLibs();
 	//controlStatementsIntro();
 	//selectionControlStatementsIfElse();
-	selectionGrades();
-
+	//selectionGrades();
+	//repetitionControlStatements();
+	//repetitionSum();
+	//breakContinue();
+	//randomNumberGenerator();
+	singleDiRoll();
 
 	return 0;
 }

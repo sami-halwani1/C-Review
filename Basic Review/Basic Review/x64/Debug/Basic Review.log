@@ -1,5 +1,11 @@
 ﻿  main.cpp
-C:\Users\4sake\Desktop\sami-halwaniGithub\C++ Review\Basic Review\Basic Review\Header.h(132,6): warning C4101: 'age': unreferenced local variable
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(139,6): warning C4101: 'age': unreferenced local variable
   (compiling source file 'main.cpp')
   
-  Basic Review.vcxproj -> C:\Users\4sake\Desktop\sami-halwaniGithub\C++ Review\Basic Review\x64\Debug\Basic Review.exe
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(414,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\Basic Review\Header.h(424,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+  Basic Review.vcxproj -> C:\Users\4sake\Desktop\sami-halwaniGithub\C-Review\Basic Review\x64\Debug\Basic Review.exe

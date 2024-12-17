@@ -2,6 +2,8 @@
 #include  <iostream>
 #include <string>
 #include <iomanip>
+#include <cstdlib> // Random Number Generator
+#include <ctime> // Library to Reference Current Local Time
 
 using namespace std;
 
@@ -21,6 +23,11 @@ void madLibs();
 void controlStatementsIntro();
 void selectionControlStatementsIfElse();
 void selectionGrades();
+void repetitionControlStatements();
+void repetitionSum();
+void breakContinue();
+void randomNumberGenerator();
+void singleDiRoll();
 
 //----------------------------------------------------------
 //----------------------------------------------------------
@@ -295,6 +302,136 @@ void selectionGrades() {
 			cout << "You have entered and invalid Grade" << endl;
 
 	}//end switch
+
+}
+void repetitionControlStatements() {
+	int count = 0;
+
+	cout << "While Loop: " << endl;
+	while (count < 10) {
+		cout << count << endl;
+		count++;
+
+	}
+
+	cout << endl << endl;
+
+	cout << "Do-While Loop: " << endl;
+	int count2 = 10;
+	do {
+		cout << count2 << endl;
+		count2++;
+	} while (count2 < 10);
+
+	cout << endl << endl;
+
+	cout << "For-Loop: " << endl;
+	for (int i = 0; i < 10; i++) {
+		cout << i << endl;
+	}
+
+	cout << endl << endl;
+
+	int input; //Priming
+	cout << "Please Enter a non-negative integer to continue,";
+	cout << "or negative if you want to quit!" << endl;
+	cin >> input;
+	while (input >= 0) {
+		cout << "Please Enter a non-negative integer to continue,";
+		cout << "or negative if you want to quit!" << endl;
+		cin >> input;
+		cout << "Your Input is: " << input << endl;
+	}
+}
+void repetitionSum() {
+
+	int input;
+	int sum = 0;
+
+	do {
+		cout << "Please Enter a Postive Real Integer, or Negative if you want to Exit." << endl;
+		cin >> input;
+		sum += input;
+		cout << "The New Sum is: " << sum << endl;
+		
+
+	} while (input >= 0);
+	cout << "Your Final Sum is: " << sum;
+
+}
+void breakContinue() {
+
+	int count = 0;
+
+	cout << "While loop w/Continue: " << endl;
+	while (count < 10) {
+
+		if (count == 5) {
+			count++;
+			continue;
+		}
+		cout << count << endl;
+		count++;
+	}
+	cout << endl << endl;
+
+	cout << "For Loop w/Continue: " << endl;
+
+	for (int i = 0; i < 10; i++) {
+		if (i == 5) {
+			continue;
+		}
+		cout << i << endl;
+	}
+
+	cout << endl << endl;
+
+	cout << "For Loop w/Break: " << endl;
+
+	for (int i = 0; i < 10; i++) {
+		if (i == 5) {
+			break;
+		}
+		cout << i << endl;
+	}
+
+
+	cout << endl << endl;
+
+	cout << "For Loop -- Even Only: " << endl;
+	for (int i = 0; i < 10; i++) {
+		if ((i % 2) == 0 ) {
+			cout << i << endl;
+			continue;
+		}
+		
+	}
+
+
+}
+void randomNumberGenerator() {
+
+	srand(time(nullptr));
+	int val1 = rand() % 10; // Val1 Will be between 0 and 9
+	
+	int val2 = rand() % 10 + 1; // Val2 will be between 1 and 10
+
+	cout << "Value 1: " << val1 << endl;
+	cout << "Value 2: " << val2 << endl;
+}
+void singleDiRoll() {
+
+	srand(time(nullptr));
+	int diRoll;
+
+	int count = 1;
+	do {
+
+		diRoll = rand() % 6 + 1;
+		cout << "Dice Roll " << count << " is: " << diRoll << endl;
+		count++;
+
+	} while (count <= 10);
 
 }
 //----------------------------------------------------------
