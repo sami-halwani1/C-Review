@@ -4,6 +4,8 @@
 #include <iomanip>
 #include <cstdlib> // Random Number Generator
 #include <ctime> // Library to Reference Current Local Time
+#include <array> // Library to reference Array Class
+#include <vector> // Library to reference Vector Class
 
 using namespace std;
 
@@ -28,7 +30,13 @@ void repetitionSum();
 void breakContinue();
 void randomNumberGenerator();
 void singleDiRoll();
-
+void jamOftheMonth();
+void oddsAndEvens();
+void guessTheNumber();
+void arrays();
+void moreArrays();
+void arrayClass();
+void vectorClass();
 //----------------------------------------------------------
 //----------------------------------------------------------
 
@@ -433,6 +441,224 @@ void singleDiRoll() {
 
 	} while (count <= 10);
 
+}
+void jamOftheMonth() {
+
+	char package;
+	int units = 0;
+	double sum = 0;
+
+
+	cout << "Press D Exit" << endl;
+
+	cout << "What Package do you own? A, B, C? ";
+	cin >> package;
+	package = toupper(package);
+
+	while ( package !='D') {
+		cout << "How many jams, jellies, or preserves did you purchase this month? ";
+		cin >> units;
+		
+
+		switch (package)
+		{
+		case 'A':
+			sum = 8.00;
+			if (units > 2) {
+				sum += 5 * (units - 2);
+			}
+			break;
+		case 'B':
+			sum = 12.00;
+			if (units > 4) {
+				sum += 4 * (units - 4);
+			}
+			break;
+		case 'C':
+			sum = 15.00;
+			if (units > 6) {
+				sum += 3 * (units - 6);
+			}
+			break;
+		default:
+			cout << "Invalid Package Selected, Please Select a Package from the choices." << endl;
+
+		}
+		cout << "You Owe $" << sum << endl;
+
+		cout << "Press D Exit" << endl;
+		cout << "What Package do you own? A, B, C? ";
+		cin >> package;
+		package = toupper(package);
+	} 
+	
+
+}
+void oddsAndEvens() {
+
+	for (int i = 0; i <= 50; i++) {
+		if ((i % 2) == 0) {
+			cout << i << " is even!" << endl;
+		}
+		else {
+			cout << i << " is odd!" << endl;
+		}
+	}
+
+}
+void guessTheNumber() {
+
+	srand(time(nullptr));
+
+	int count = 0;
+	int num = rand() % 100 + 1;
+	int input;
+
+	cout << "Pick a Number Less than 0 to Exit" << endl;
+	cout << "Guess a number 1-100: ";
+
+	do {
+		cin >> input;
+
+		if (input > 100) {
+			cout << "You have Wasted Your Guess Try again" << endl;
+			count++;
+			continue;
+		}
+		if (input == num) {
+			count++;
+			break;
+		}
+		else if (input < num)
+		{
+			cout << "Your Guess is too low!" << endl;
+			count++;
+			continue;
+		}
+		else
+		{
+			cout << "You Guess is too high!" << endl;
+			count++;
+			continue;
+		}
+
+
+	} while (input > 0);
+	cout << "Congradulations, You have Guess the Number in " << count << " guesses!" << endl;
+}
+void arrays() {
+
+	const int ARRAY_SIZE = 5;
+	int myArray[ARRAY_SIZE];
+	string names[4] = { "Bob", "Sally", "John", "Ed" };
+
+	myArray[0] = 15;
+	myArray[1] = 20;
+	myArray[2] = 22;
+	myArray[3] = 13;
+	myArray[4] = 6;
+
+	for (int i = 0; i < ARRAY_SIZE; i++) {
+		cout << myArray[i] << endl;
+
+	}
+	/*for (int i = 0; i < 4; i++) {
+		cout << names[i] << endl;
+	}*/
+
+	for (auto name : names) {
+		cout << name << endl;
+	}
+
+
+}
+void moreArrays() {
+
+	int myArray[10];
+	int input;
+	for (int i = 0; i < 10; i++) {
+		input = i + 1;
+		myArray[i] = input;
+	}
+
+	for (auto val : myArray) {
+		cout << val << endl;
+	}
+}
+void arrayClass() {
+
+	array<int, 5> myIntArray{2,5,10,1,17};
+	for (int a : myIntArray) {
+
+		cout << a << endl;
+
+	}
+	cout << "Size of Array: " << myIntArray.size() << endl;
+
+
+	array<int, 10> twiceNumber{};
+	for (int i = 0; i < 10; i++) {
+		twiceNumber[i] = i * 2;
+	}
+	for (auto num : twiceNumber) {
+		cout << num << endl;
+	}
+	cout << "Size of TwiceNumber Array: " << twiceNumber.size() << endl;
+}
+void vectorClass() {
+
+	vector<int> someVec;
+	vector<string> anotherVec(3);
+
+	someVec.push_back(1);
+	someVec.push_back(2);
+	someVec.push_back(3);
+
+	cout << "someVec Size: " << someVec.size() << endl;
+
+	anotherVec[0] = "John";
+	anotherVec[1] = "Bob";
+	anotherVec[2] = "Sally";
+	anotherVec.push_back("Shannon");
+
+	for (int val : someVec) {
+		cout << val << endl;
+
+	}
+	cout << endl;
+
+	for (string name : anotherVec) {
+		cout << name << endl;
+	}
+
+	cout << "Front and Back: " << endl;
+	cout << "Front: " << anotherVec.front() << endl;
+	cout << "Back: " << anotherVec.back() << endl;
+
+	anotherVec.pop_back();
+	anotherVec.insert(anotherVec.begin(), "Don");
+
+	cout << "Now the Front: " << anotherVec.front() << endl;
+	cout << "Now the Back: " << anotherVec.back() << endl;
+
+
+	cout << endl << endl;
+	cout << "Vector Practice" << endl;
+	vector<string> newVector;
+
+	newVector.push_back("Sami");
+	newVector.push_back("Rami");
+	newVector.push_back("Tarik");
+	newVector.push_back("Yamen");
+	newVector.push_back("Ahlam");
+
+	newVector.insert(newVector.begin() + 2, "John Baugh");
+	newVector.pop_back();
+
+	for (auto name : newVector) {
+		cout << name << endl;
+
+	}
 }
 //----------------------------------------------------------
 //----------------------------------------------------------

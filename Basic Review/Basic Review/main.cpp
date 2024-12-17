@@ -26,7 +26,14 @@ int main() {
 	//repetitionSum();
 	//breakContinue();
 	//randomNumberGenerator();
-	singleDiRoll();
+	//singleDiRoll();
+	//jamOftheMonth();
+	//oddsAndEvens();
+	//guessTheNumber();
+	//arrays();
+	//moreArrays();
+	//arrayClass();
+	//vectorClass();
 
 	return 0;
 }
