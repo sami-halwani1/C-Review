@@ -73,8 +73,15 @@ int main() {
 	//cout << "sum: " << sum << endl;
 	//cout << "Names: " << catStr << endl;
 	//cout << "Product ^3: " << product_3 << endl;
+	//mathReview();
 
-	mathReview();
+	recursionCountDown(10);
+	int totalSum = sumvalues(10);
+	cout << "Sum of " << to_string(10) << " is " << totalSum << endl;
+	int factorialTotal = factorialFun(5);
+	cout << "Factorial is " << factorialTotal << endl;
+
+
 
 	return 0;
 }

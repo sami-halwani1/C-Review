@@ -49,6 +49,9 @@ void passingSchemes(int&);
 void threeTimeN(int, int&);
 void modifyGlobal(int &);
 void mathReview();
+void recursionCountDown(int num);
+int sumvalues(int num);
+int factorialFun(int num);
 //----------------------------------------------------------
 //----------------------------------------------------------
 
@@ -789,11 +792,35 @@ void mathReview() {
 	int sqrtResult = sqrt(25);
 	int ceilResult = ceil(4.2);
 	int floorResult = floor(4.2);
+	double logValue = log2(512);
 
 	cout << "powResult: " << powResult << endl;
 	cout << "sqrtResult: " << sqrtResult << endl;
 	cout << "powReceilResultsult: " << ceilResult << endl;
 	cout << "floorResult: " << floorResult << endl;
+
+
+	cout << "Log2(512): " << logValue << endl;
 }
+void recursionCountDown(int num) {
+	if (num >= 0) {
+		cout << num << endl;
+		recursionCountDown(num - 1);
+	}
+}
+int sumvalues(int num) {
+	if (num >= 1) {
+		return num + sumvalues(num - 1);
+
+	}
+	return num;
+}
+int factorialFun(int num) {
+	if (num > 1){
+		return num * factorialFun(num-1);
+	}
+	return num;
+}
+
 //----------------------------------------------------------
 //----------------------------------------------------------
